@@ -1,0 +1,31 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  var man={name : 'RajiniKanth', age : 25, hasPets : true};
+  
+  let a=[]
+  function printAllKeys()
+  {
+for (var key of Object.keys(man)) {
+    a.push(man[key])
+}
+
+console.log(a)
+  }  
+  
+  printAllKeys()
+
+});
