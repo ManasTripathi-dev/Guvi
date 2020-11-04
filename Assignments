@@ -1,0 +1,74 @@
+Problem[0]A
+...................................................................................................
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ },
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+ ]
+}
+
+cat.name="Fluffyy"
+cat["height"]='2.1';
+cat["weight"]='15kg'
+console.log("Activities:")
+console.log(cat.activities)
+for(var i of cat["catFriends"])
+{
+    console.log(i.activities)
+}
+
+console.log("Names:")
+
+for(var j of cat["catFriends"])
+{
+    console.log(j.name)
+}
+
+var fweight=0;
+
+for (var k of cat["catFriends"])
+{
+    fweight=fweight+(parseInt(k.weight))
+}
+
+console.log("weight")
+console.log(fweight)
+
+cat.catFriends[0].furcolor="pink";
+
+
+cat.catFriends[0].activities.push("Act","Acti");
+
+cat.catFriends[1].activities.push("Activ","Activit");
+
+console.log(cat)
+
+  //end-here
+});
