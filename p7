@@ -1,0 +1,35 @@
+problem 7
+...................................................................................................................
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+    
+    var expected = {foo: 5, bar: 6};
+    var actual = {foo: 5, bar: 7}
+    function assertObjectsEqual(a,b)
+    {
+        let str=JSON.stringify(a);
+        let str1=JSON.stringify(b);
+        if(str===str1)
+        {
+            console.log('passed');
+        }
+        else
+        {
+            console.log('Failed');
+        }
+    }
+    assertObjectsEqual(actual, expected);
+
+});
