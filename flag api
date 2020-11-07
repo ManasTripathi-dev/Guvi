@@ -1,0 +1,12 @@
+Api
+...........................................................................................................
+function fetchFlag(){
+    let x = new XMLHttpRequest();
+    x.open("GET","https://restcountries.eu/rest/v2/all");
+    x.send();
+    x.onload=function(){
+        let man = [];
+        res=JSON.parse(x.responseText);
+        console.log(res);
+  }
+}
